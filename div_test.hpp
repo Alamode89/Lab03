@@ -51,7 +51,7 @@ TEST(DivTest, DivStringZero) {
 	Op* a = new Op(0);
         Op* b = new Op(6);
         Div* test = new Div(a, b);
-	string quotient = "0.000000 / 6.000000";
+	string quotient = "(0.000000 / 6.000000)";
         EXPECT_EQ(test->stringify(), quotient);
 }
 
@@ -59,7 +59,7 @@ TEST(DivTest, DivStringDecimals) {
         Op* a = new Op(11.5);
         Op* b = new Op(2.6);
         Div* test = new Div(a, b);
-        string quotient = "11.500000 / 2.600000";
+        string quotient = "(11.500000 / 2.600000)";
         EXPECT_EQ(test->stringify(), quotient);
 }
 
@@ -67,7 +67,7 @@ TEST(DivTest, DivStringNegAndPosNum) {
         Op* a = new Op(-6);
         Op* b = new Op(3.0);
         Div* test = new Div(a, b);
-        string quotient = "-6.000000 / 3.000000";
+        string quotient = "(-6.000000 / 3.000000)";
         EXPECT_EQ(test->stringify(), quotient);
 }
 
@@ -75,7 +75,7 @@ TEST(DivTest, DivStringTwoNegNumbers) {
         Op* a = new Op(-80);
         Op* b = new Op(-5);
         Div* test = new Div(a, b);
-        string quotient = "-80.000000 / -5.000000";
+        string quotient = "(-80.000000 / -5.000000)";
         EXPECT_EQ(test->stringify(), quotient);
 }
 
@@ -83,7 +83,7 @@ TEST(DivTest, DivStringTripleDigitNums) {
         Op* a = new Op(120);
         Op* b = new Op(222);
         Div* test = new Div(a, b);
-        string quotient = "120.000000 / 222.000000";
+        string quotient = "(120.000000 / 222.000000)";
         EXPECT_EQ(test->stringify(), quotient);
 }
 
@@ -111,7 +111,7 @@ TEST(DivTest, DivStringAfterAdd) {
         Add* sum = new Add(a, b);
         Op* c = new Op(2);
         Div* test = new Div(sum, c);
-	string quotient = "2.000000 + 2.000000 / 2.000000";
+	string quotient = "((2.000000 + 2.000000) / 2.000000)";
         EXPECT_EQ(test->stringify(), quotient);
 }
 

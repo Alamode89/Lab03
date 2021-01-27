@@ -79,13 +79,13 @@ TEST(subTest, stringPosSub) {
     Base* oper1 = new Op(24);
     Base* oper2 = new Op(13);
     Base* subTest = new Sub(oper1, oper2);
-    EXPECT_EQ("24.000000 - 13.000000", subTest->stringify());
+    EXPECT_EQ("(24.000000 - 13.000000)", subTest->stringify());
 }
 
 TEST(subTest, stringNegSub) {
     Base* oper1 = new Op(-11);
     Base* oper2 = new Op(-4);
     Base* subTest = new Sub(oper1, oper2);
-    EXPECT_EQ("-11.000000 - -4.000000", subTest->stringify());
+    EXPECT_EQ("(-11.000000 - -4.000000)", subTest->stringify());
 }
 #endif

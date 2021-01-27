@@ -75,7 +75,7 @@ TEST(powTest, strPow) {
     Base* oper1 = new Op(-12);
     Base* oper2 = new Op(2);
     Base* powTest = new Pow(oper1, oper2);
-    EXPECT_EQ("(-12.000000) ** (2.000000) ", powTest->stringify());
+    EXPECT_EQ("(-12.000000 ** 2.000000)", powTest->stringify());
 }
 
 TEST(powTest, strAddPow) {
@@ -84,7 +84,7 @@ TEST(powTest, strAddPow) {
     Base* sum = new Add(oper1, oper2);
     Base* oper3 = new Op(4);
     Base* powTest = new Pow(oper3, sum);
-    EXPECT_EQ("(4.000000) ** (2.000000 + 3.000000) ", powTest->stringify());
+    EXPECT_EQ("(4.000000 ** (2.000000 + 3.000000))", powTest->stringify());
 }
 
 #endif

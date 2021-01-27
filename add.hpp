@@ -18,7 +18,7 @@ class Add : public Base {
 		}
 		
 		string stringify() {
-			return leftStr + " + " + rightStr;
+			return ("(" + leftStr + " + " + rightStr + ")");
 		}
 
 	private:

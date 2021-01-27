@@ -23,7 +23,7 @@ class Div : public Base {
         }
 
         string stringify() {
-                return (stringA + " / " + stringB);
+                return ("(" + stringA + " / " + stringB + ")");
         }
 
    private:

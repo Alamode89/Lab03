@@ -23,7 +23,7 @@ class Mult : public Base {
 	}
 
 	string stringify() {
-		return stringA + " * " + stringB;
+		return ("(" + stringA + " * " + stringB + ")");
 	}
 
    private:

@@ -72,13 +72,13 @@ TEST(addTest, stringPosAdd) {
     Base* oper1 = new Op(14);
     Base* oper2 = new Op(6);
     Base* addTest = new Add(oper1, oper2);
-    EXPECT_EQ("14.000000 + 6.000000", addTest->stringify());
+    EXPECT_EQ("(14.000000 + 6.000000)", addTest->stringify());
 }
 
 TEST(addTest, stringNegAdd) {
     Base* oper1 = new Op(-12);
     Base* oper2 = new Op(-10);
     Base* addTest = new Add(oper1, oper2);
-    EXPECT_EQ("-12.000000 + -10.000000", addTest->stringify());
+    EXPECT_EQ("(-12.000000 + -10.000000)", addTest->stringify());
 }
 #endif
